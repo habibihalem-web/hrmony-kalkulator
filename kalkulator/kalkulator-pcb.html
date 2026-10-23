@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator PCB / MTD 2026 — Anggaran Potongan Cukai Bulanan | HRMony</title>
+<meta name="description" content="Anggar PCB / MTD (Potongan Cukai Berjadual) bulanan anda 2026 berdasarkan gaji, status perkahwinan, anak dan pelepasan. Percuma & pantas.">
+<meta name="keywords" content="kalkulator pcb, kalkulator mtd, potongan cukai bulanan 2026, kira pcb, lhdn pcb calculator">
+<link rel="stylesheet" href="hrmony-calc.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Apa itu PCB / MTD?","acceptedAnswer":{"@type":"Answer","text":"PCB (Potongan Cukai Berjadual) atau MTD ialah potongan cukai pendapatan bulanan yang dipotong majikan daripada gaji pekerja dan diserahkan kepada LHDN sebelum 15hb bulan berikutnya."}},
+{"@type":"Question","name":"Adakah kalkulator ini tepat?","acceptedAnswer":{"@type":"Answer","text":"Ia memberi anggaran berdasarkan kaedah cukai tahunan dengan pelepasan asas. PCB rasmi menggunakan formula MTD LHDN penuh yang mengambil kira semua pelepasan — nilai sebenar mungkin berbeza."}}
+]}
+</script>
+</head>
+<body>
+<nav><div class="wrap"><a href="index.html" class="logo"><span class="dot">⬡</span> HRMony</a><a href="https://hrmony.asia" class="nav-cta">Payroll Percuma →</a></div></nav>
+<header class="head"><div class="wrap"><span class="pill">KALKULATOR · ANGGARAN 2026</span><h1>Kalkulator PCB / MTD</h1><p>Anggar potongan cukai bulanan anda berdasarkan gaji dan pelepasan.</p></div></header>
+
+<div class="wrap"><div class="calc">
+  <div class="panel"><h2>Butiran</h2>
+    <div class="field"><label>Gaji kasar sebulan</label><div class="prefix"><input type="number" id="gross" value="6000" min="0" step="100"></div></div>
+    <label class="checkrow"><input type="checkbox" id="married"> Berkahwin, pasangan tidak bekerja</label>
+    <div class="field"><label>Bilangan anak</label><input type="number" id="children" value="0" min="0" max="15"></div>
+    <div class="field"><label>Pelepasan tambahan setahun (insurans, dll)</label><div class="prefix"><input type="number" id="relief" value="0" min="0" step="100"></div></div>
+    <div class="hint">Pelepasan asas individu RM9,000 + EPF (had RM4,000) diambil kira automatik.</div>
+  </div>
+  <div class="panel result">
+    <div class="big"><div class="lbl">Anggaran PCB Sebulan</div><div class="val" id="r-pcb">RM 0.00</div></div>
+    <div class="line"><span class="k">Gaji tahunan</span><span class="v" id="r-annual">RM 0.00</span></div>
+    <div class="line"><span class="k">Anggaran cukai setahun</span><span class="v" id="r-yeartax">RM 0.00</span></div>
+    <div class="line total"><span class="k">PCB sebulan (anggaran)</span><span class="v" id="r-pcb2">RM 0.00</span></div>
+  </div>
+</div>
+<div class="note"><b>Penting:</b> Ini <b>anggaran</b> berdasarkan kaedah cukai tahunan + pelepasan asas. PCB rasmi menggunakan formula MTD LHDN penuh (pelepasan pasangan, anak, insurans, zakat, dll). Untuk PCB tepat automatik, guna <a href="https://hrmony.asia">HRMony</a>.</div></div>
+
+<section><div class="wrap"><div class="prose">
+  <h2>Cara PCB / MTD dikira</h2>
+  <p>PCB (Potongan Cukai Berjadual) ialah potongan cukai pendapatan bulanan. Ia bergantung pada pendapatan tahunan dijangka, ditolak pelepasan cukai, kemudian dikira mengikut kadar cukai progresif penduduk.</p>
+  <h3>Kadar cukai pendapatan penduduk (YA2025/2026)</h3>
+  <table><tr><th>Pendapatan bercukai (RM)</th><th>Kadar</th></tr>
+    <tr><td>0 – 5,000</td><td>0%</td></tr><tr><td>5,001 – 20,000</td><td>1%</td></tr>
+    <tr><td>20,001 – 35,000</td><td>3%</td></tr><tr><td>35,001 – 50,000</td><td>6%</td></tr>
+    <tr><td>50,001 – 70,000</td><td>11%</td></tr><tr><td>70,001 – 100,000</td><td>19%</td></tr>
+    <tr><td>100,001 – 400,000</td><td>25%</td></tr><tr><td>&gt; 400,000</td><td>26–30%</td></tr>
+  </table>
+  <p>PCB diserahkan kepada LHDN (borang CP39) sebelum 15hb bulan berikutnya. Arahan CP38 (jika ada) dipotong di atas PCB biasa.</p>
+</div></div></section>
+
+<section class="related"><div class="wrap"><h2>Kalkulator berkaitan</h2><p class="sub">Semua percuma · kadar 2026</p>
+  <div class="rgrid">
+    <a class="rcard" href="kalkulator-gaji-bersih.html"><div class="t">Gaji Bersih</div><div class="d">Take-home selepas semua potongan</div></a>
+    <a class="rcard" href="kalkulator-epf.html"><div class="t">Kalkulator EPF</div><div class="d">Caruman KWSP</div></a>
+    <a class="rcard" href="kalkulator-bonus.html"><div class="t">Kalkulator Bonus</div><div class="d">EPF & cukai atas bonus</div></a>
+  </div></div></section>
+
+<div class="cta"><h2>PCB tepat, automatik</h2><p>HRMony kira PCB ikut formula LHDN dan jana fail CP39 — tiada teka. Percuma, staf tanpa had.</p><a href="https://hrmony.asia">Cuba HRMony Percuma →</a><div class="micro">RM0 selamanya · Patuh 100% Malaysia</div></div>
+<footer><div class="wrap"><div class="disc">Kalkulator memberi <b>anggaran</b> sahaja, bukan nasihat cukai. PCB sebenar mengikut formula MTD LHDN. Sahkan dengan LHDN.</div>© 2026 HRMony · hrmony.asia</div></footer>
+
+<script src="hrmony-calc.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+function calc(){const g=+$('gross').value||0,married=$('married').checked,children=+$('children').value||0,relief=+$('relief').value||0;
+  const pcb=HRMONY.pcb(g,{married,spouseWorking:false,children,otherRelief:relief});
+  $('r-annual').textContent=HRMONY.fmt(g*12);$('r-yeartax').textContent=HRMONY.fmt(pcb*12);
+  $('r-pcb').textContent=HRMONY.fmt(pcb);$('r-pcb2').textContent=HRMONY.fmt(pcb);}
+document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
+</script>
+</body></html>

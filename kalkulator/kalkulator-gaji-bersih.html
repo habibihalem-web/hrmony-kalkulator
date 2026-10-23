@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator Gaji Bersih Malaysia 2026 (EPF, SOCSO, EIS, PCB) | HRMony</title>
+<meta name="description" content="Kira gaji bersih (take-home) anda selepas potongan EPF, SOCSO, EIS dan PCB mengikut kadar 2026. Percuma, pantas, untuk pekerja & majikan Malaysia.">
+<meta name="keywords" content="kalkulator gaji bersih, kira gaji bersih malaysia, gaji selepas potongan, take home pay malaysia, kalkulator gaji 2026">
+<link rel="stylesheet" href="hrmony-calc.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Bagaimana kira gaji bersih di Malaysia?","acceptedAnswer":{"@type":"Answer","text":"Gaji bersih = gaji kasar tolak potongan wajib: EPF pekerja (11%), SOCSO (0.5%), EIS (0.2%) dan PCB (cukai bulanan). Kalkulator ini mengira kesemuanya secara automatik mengikut kadar 2026."}},
+{"@type":"Question","name":"Berapa potongan EPF dari gaji?","acceptedAnswer":{"@type":"Answer","text":"Bagi warganegara bawah 60 tahun, potongan EPF pekerja ialah 11% daripada gaji. Majikan menyumbang 13% (gaji ≤RM5,000) atau 12% (gaji >RM5,000)."}},
+{"@type":"Question","name":"Adakah PCB dipotong dari semua gaji?","acceptedAnswer":{"@type":"Answer","text":"PCB hanya dipotong jika pendapatan bercukai melebihi ambang selepas pelepasan. Gaji rendah selalunya PCB sifar. Kalkulator memberi anggaran; jumlah rasmi mengikut formula MTD LHDN."}}
+]}
+</script>
+</head>
+<body>
+<nav><div class="wrap"><a href="index.html" class="logo"><span class="dot">⬡</span> HRMony</a><a href="https://hrmony.asia" class="nav-cta">Payroll Percuma →</a></div></nav>
+
+<header class="head"><div class="wrap">
+  <span class="pill">KALKULATOR · KADAR 2026</span>
+  <h1>Kalkulator Gaji Bersih Malaysia</h1>
+  <p>Kira gaji take-home anda selepas EPF, SOCSO, EIS dan PCB — dan lihat kos sebenar kepada majikan.</p>
+</div></header>
+
+<div class="wrap"><div class="calc">
+  <div class="panel">
+    <h2>Butiran gaji</h2>
+    <div class="field"><label>Gaji kasar sebulan</label><div class="prefix"><input type="number" id="gross" value="3000" min="0" step="50"></div></div>
+    <div class="row2">
+      <div class="field"><label>Umur</label><input type="number" id="age" value="30" min="16" max="80"></div>
+      <div class="field"><label>Warganegara</label><select id="citizen"><option value="1">Warga Malaysia</option><option value="0">Bukan warga</option></select></div>
+    </div>
+    <label class="checkrow"><input type="checkbox" id="married"> Berkahwin, pasangan tidak bekerja</label>
+    <div class="field"><label>Bilangan anak (pelepasan)</label><input type="number" id="children" value="0" min="0" max="15"></div>
+    <label class="checkrow"><input type="checkbox" id="skbbkOptedOut"> Saya (warga) dah <em>opt-out</em> SKBBK — hantar Notis Pelepasan Liabiliti dlm tempoh 13 Jul–31 Ogos 2026 (tempoh ini SUDAH TAMAT; default warga = <b>DIPOTONG</b> ~RM45 maks sebulan — <a href="kalkulator-skbbk.html">apa ini?</a>)</label>
+    <label class="checkrow"><input type="checkbox" id="hrdf"> Papar levy HRD Corp (1%, majikan ≥10 pekerja)</label>
+  </div>
+
+  <div class="panel result">
+    <div class="big"><div class="lbl">Gaji Bersih (Take-Home)</div><div class="val g" id="r-net">RM 0.00</div></div>
+    <div class="line"><span class="k">Gaji kasar</span><span class="v" id="r-gross">RM 0.00</span></div>
+    <div class="line minus"><span class="k">EPF pekerja <span id="r-epfrate" class="badge">11%</span></span><span class="v" id="r-epf">- RM 0.00</span></div>
+    <div class="line minus"><span class="k">SOCSO pekerja</span><span class="v" id="r-socso">- RM 0.00</span></div>
+    <div class="line minus"><span class="k">EIS pekerja</span><span class="v" id="r-eis">- RM 0.00</span></div>
+    <div class="line minus" id="r-skbbkrow"><span class="k">SKBBK / Lindung 24 Jam <span class="badge" style="background:var(--amber-l);color:#7a5618">Baharu</span></span><span class="v" id="r-skbbk">- RM 0.00</span></div>
+    <div class="line minus"><span class="k">PCB (anggaran)</span><span class="v" id="r-pcb">- RM 0.00</span></div>
+    <div class="line total"><span class="k">Gaji bersih</span><span class="v" id="r-net2">RM 0.00</span></div>
+    <div style="margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)">
+      <div class="line"><span class="k">EPF majikan</span><span class="v" id="r-epfr">RM 0.00</span></div>
+      <div class="line"><span class="k">SOCSO majikan</span><span class="v" id="r-socsor">RM 0.00</span></div>
+      <div class="line"><span class="k">EIS majikan</span><span class="v" id="r-eisr">RM 0.00</span></div>
+      <div class="line" id="r-hrdfrow" style="display:none"><span class="k">HRD Corp levy</span><span class="v" id="r-hrdf">RM 0.00</span></div>
+      <div class="line total"><span class="k">Jumlah kos majikan</span><span class="v" id="r-cost">RM 0.00</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="note"><b>Nota:</b> Anggaran berdasarkan kadar 2026. EPF dibundarkan ke ringgit (peraturan KWSP); SOCSO/EIS mengikut kadar (jumlah rasmi ikut Jadual PERKESO); PCB ialah anggaran (formula MTD LHDN sebenar mengambil kira pelepasan penuh). Untuk pengiraan rasmi automatik, guna <a href="https://hrmony.asia">HRMony</a>.</div>
+</div>
+
+<section><div class="wrap"><div class="prose">
+  <h2>Cara kira gaji bersih di Malaysia</h2>
+  <p>Gaji bersih (atau <em>take-home pay</em>) ialah jumlah yang benar-benar masuk ke akaun anda selepas potongan wajib. Di Malaysia, empat potongan utama ialah:</p>
+  <ul>
+    <li><strong>EPF/KWSP</strong> — 11% daripada gaji untuk warganegara bawah 60 tahun.</li>
+    <li><strong>SOCSO/PERKESO</strong> — 0.5% (Kategori 1), siling gaji RM6,000.</li>
+    <li><strong>EIS/SIP</strong> — 0.2%, siling gaji RM6,000, umur 18–60.</li>
+    <li><strong>PCB/MTD</strong> — potongan cukai bulanan, bergantung pendapatan & pelepasan.</li>
+  </ul>
+  <h3>Kos sebenar kepada majikan</h3>
+  <p>Majikan menanggung lebih daripada gaji kasar: caruman EPF majikan (12–13%), SOCSO (1.75%), EIS (0.2%), dan levy HRD Corp (1% jika ≥10 pekerja). Kalkulator ini menunjukkan jumlah kos sebenar pengambilan.</p>
+</div></div></section>
+
+<section class="related"><div class="wrap">
+  <h2>Kalkulator berkaitan</h2><p class="sub">Semua percuma · kadar 2026</p>
+  <div class="rgrid">
+    <a class="rcard" href="kalkulator-epf.html"><div class="t">Kalkulator EPF</div><div class="d">Caruman pekerja & majikan</div></a>
+    <a class="rcard" href="kalkulator-pcb.html"><div class="t">Kalkulator PCB</div><div class="d">Anggaran cukai bulanan</div></a>
+    <a class="rcard" href="kalkulator-kos-pekerja.html"><div class="t">Kos Pekerja</div><div class="d">Jumlah kos majikan</div></a>
+  </div>
+</div></section>
+
+<div class="cta">
+  <h2>Berhenti kira manual</h2>
+  <p>HRMony jana payroll lengkap — EPF, SOCSO, EIS, PCB, slip gaji & borang EA — secara automatik. Percuma, staf tanpa had.</p>
+  <a href="https://hrmony.asia">Cuba HRMony Percuma →</a>
+  <div class="micro">RM0 selamanya · Tanpa kad kredit · Patuh 100% Malaysia</div>
+</div>
+
+<footer><div class="wrap">
+  <div class="disc">Kalkulator ini memberi anggaran untuk tujuan maklumat sahaja dan bukan nasihat cukai/perundangan. Kadar berdasarkan parameter statutori Malaysia 2026. Jumlah rasmi mengikut KWSP, PERKESO dan LHDN. Sahkan dengan pihak berkuasa berkaitan.</div>
+  © 2026 HRMony · hrmony.asia
+</div></footer>
+
+<script src="hrmony-calc.js"></script>
+<script>
+  const $=id=>document.getElementById(id);
+  function calc(){
+    const gross=+$('gross').value||0, age=+$('age').value||30, citizen=$('citizen').value==='1';
+    const married=$('married').checked, children=+$('children').value||0, hrdf=$('hrdf').checked;
+    $('skbbkOptedOut').disabled=!citizen;
+    if(!citizen) $('skbbkOptedOut').checked=false;
+    const skbbkOptedOut=$('skbbkOptedOut').checked;
+    const r=HRMONY.net(gross,{age,citizen,married,spouseWorking:false,children,hrdf,skbbkOptedOut});
+    $('r-gross').textContent=HRMONY.fmt(gross);
+    $('r-epfrate').textContent=Math.round(r.epf.empeRate*100)+'%';
+    $('r-epf').textContent='- '+HRMONY.fmt(r.epf.empe);
+    $('r-socso').textContent='- '+HRMONY.fmt(r.socso.empe);
+    $('r-eis').textContent='- '+HRMONY.fmt(r.eis.empe);
+    $('r-skbbk').textContent='- '+HRMONY.fmt(r.skbbk);
+    $('r-skbbkrow').style.display=r.skbbk>0?'flex':'none';
+    $('r-pcb').textContent='- '+HRMONY.fmt(r.pcb);
+    $('r-net').textContent=HRMONY.fmt(r.net); $('r-net2').textContent=HRMONY.fmt(r.net);
+    $('r-epfr').textContent=HRMONY.fmt(r.epf.empr);
+    $('r-socsor').textContent=HRMONY.fmt(r.socso.empr);
+    $('r-eisr').textContent=HRMONY.fmt(r.eis.empr);
+    $('r-hrdfrow').style.display=hrdf?'flex':'none';
+    $('r-hrdf').textContent=HRMONY.fmt(r.hrdf);
+    $('r-cost').textContent=HRMONY.fmt(r.employerCost);
+  }
+  document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));
+  calc();
+</script>
+</body></html>

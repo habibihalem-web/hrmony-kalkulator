@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator EPF / KWSP 2026 — Caruman Pekerja & Majikan | HRMony</title>
+<meta name="description" content="Kira caruman EPF (KWSP) 2026 — bahagian pekerja (11%) dan majikan (12–13%). Termasuk kadar umur 60+ dan pekerja asing (2%). Percuma.">
+<meta name="keywords" content="kalkulator epf, kalkulator kwsp, caruman epf 2026, kira caruman kwsp, epf pekerja majikan">
+<link rel="stylesheet" href="hrmony-calc.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Berapa peratus caruman EPF 2026?","acceptedAnswer":{"@type":"Answer","text":"Warganegara bawah 60 tahun: pekerja 11%, majikan 13% (gaji ≤RM5,000) atau 12% (gaji >RM5,000). Umur 60+: majikan 4%, pekerja 0%. Pekerja asing: 2% + 2% (mandat Okt 2025)."}},
+{"@type":"Question","name":"Adakah pekerja asing perlu caruman EPF?","acceptedAnswer":{"@type":"Answer","text":"Ya. Mulai gaji Oktober 2025, caruman EPF wajib untuk pekerja bukan warganegara pada kadar 2% majikan dan 2% pekerja."}}
+]}
+</script>
+</head>
+<body>
+<nav><div class="wrap"><a href="index.html" class="logo"><span class="dot">⬡</span> HRMony</a><a href="https://hrmony.asia" class="nav-cta">Payroll Percuma →</a></div></nav>
+<header class="head"><div class="wrap"><span class="pill">KALKULATOR · KADAR 2026</span><h1>Kalkulator EPF / KWSP</h1><p>Kira caruman EPF bahagian pekerja dan majikan mengikut umur dan status warganegara.</p></div></header>
+
+<div class="wrap"><div class="calc">
+  <div class="panel"><h2>Butiran</h2>
+    <div class="field"><label>Gaji kasar sebulan</label><div class="prefix"><input type="number" id="gross" value="3000" min="0" step="50"></div></div>
+    <div class="row2">
+      <div class="field"><label>Umur</label><input type="number" id="age" value="30" min="16" max="80"></div>
+      <div class="field"><label>Warganegara</label><select id="citizen"><option value="1">Warga Malaysia</option><option value="0">Bukan warga (2%)</option></select></div>
+    </div>
+    <div class="hint">Kadar majikan: 13% jika gaji ≤ RM5,000, 12% jika lebih. Umur 60+: majikan 4%, pekerja 0%.</div>
+  </div>
+  <div class="panel result">
+    <div class="big"><div class="lbl">Jumlah Caruman EPF</div><div class="val" id="r-total">RM 0.00</div></div>
+    <div class="line"><span class="k">Pekerja <span class="badge" id="r-er">11%</span></span><span class="v" id="r-empe">RM 0.00</span></div>
+    <div class="line"><span class="k">Majikan <span class="badge" id="r-rr">13%</span></span><span class="v" id="r-empr">RM 0.00</span></div>
+    <div class="line total"><span class="k">Jumlah</span><span class="v" id="r-total2">RM 0.00</span></div>
+  </div>
+</div>
+<div class="note"><b>Nota:</b> Caruman dibundarkan ke ringgit terdekat mengikut peraturan KWSP. Jumlah rasmi mengikut Jadual Ketiga KWSP. Anggaran 2026.</div></div>
+
+<section><div class="wrap"><div class="prose">
+  <h2>Kadar caruman EPF 2026</h2>
+  <table><tr><th>Kategori</th><th>Pekerja</th><th>Majikan</th></tr>
+    <tr><td>Warga &lt;60, gaji ≤ RM5,000</td><td>11%</td><td>13%</td></tr>
+    <tr><td>Warga &lt;60, gaji &gt; RM5,000</td><td>11%</td><td>12%</td></tr>
+    <tr><td>Warga ≥60</td><td>0%</td><td>4%</td></tr>
+    <tr><td>Pekerja asing (Okt 2025)</td><td>2%</td><td>2%</td></tr>
+  </table>
+  <p>EPF (Kumpulan Wang Simpanan Pekerja) ialah simpanan persaraan wajib. Caruman dikira atas gaji bulanan dan dibundarkan ke ringgit terdekat mengikut Jadual Ketiga KWSP.</p>
+</div></div></section>
+
+<section class="related"><div class="wrap"><h2>Kalkulator berkaitan</h2><p class="sub">Semua percuma · kadar 2026</p>
+  <div class="rgrid">
+    <a class="rcard" href="kalkulator-gaji-bersih.html"><div class="t">Gaji Bersih</div><div class="d">Take-home selepas potongan</div></a>
+    <a class="rcard" href="kalkulator-socso.html"><div class="t">Kalkulator SOCSO</div><div class="d">Caruman PERKESO</div></a>
+    <a class="rcard" href="kalkulator-kos-pekerja.html"><div class="t">Kos Pekerja</div><div class="d">Jumlah kos majikan</div></a>
+  </div></div></section>
+
+<div class="cta"><h2>Payroll automatik, tanpa kira manual</h2><p>HRMony kira EPF, SOCSO, EIS & PCB dan jana fail KWSP secara automatik. Percuma, staf tanpa had.</p><a href="https://hrmony.asia">Cuba HRMony Percuma →</a><div class="micro">RM0 selamanya · Patuh 100% Malaysia</div></div>
+<footer><div class="wrap"><div class="disc">Kalkulator memberi anggaran untuk maklumat sahaja. Jumlah rasmi mengikut KWSP. Kadar 2026.</div>© 2026 HRMony · hrmony.asia</div></footer>
+
+<script src="hrmony-calc.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+function calc(){const g=+$('gross').value||0,age=+$('age').value||30,citizen=$('citizen').value==='1';
+  const r=HRMONY.epf(g,{age,citizen});
+  $('r-er').textContent=Math.round(r.empeRate*100)+'%';$('r-rr').textContent=Math.round(r.emprRate*100)+'%';
+  $('r-empe').textContent=HRMONY.fmt(r.empe);$('r-empr').textContent=HRMONY.fmt(r.empr);
+  $('r-total').textContent=HRMONY.fmt(r.total);$('r-total2').textContent=HRMONY.fmt(r.total);}
+document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
+</script>
+</body></html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator SOCSO / PERKESO 2026 — Caruman Pekerja & Majikan | HRMony</title>
+<meta name="description" content="Kira caruman SOCSO (PERKESO) 2026 mengikut kategori dan siling gaji RM6,000. Kategori 1 (bawah 60) dan Kategori 2 (60+). Percuma.">
+<meta name="keywords" content="kalkulator socso, kalkulator perkeso, caruman socso 2026, siling socso rm6000, socso pekerja majikan">
+<link rel="stylesheet" href="hrmony-calc.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Berapa caruman SOCSO 2026?","acceptedAnswer":{"@type":"Answer","text":"Kategori 1 (bawah 60 tahun): majikan kira-kira 1.75% dan pekerja 0.5%, tertakluk siling gaji RM6,000. Kategori 2 (60 ke atas): Bahaya Pekerjaan sahaja, majikan sahaja."}},
+{"@type":"Question","name":"Berapa siling gaji SOCSO?","acceptedAnswer":{"@type":"Answer","text":"Siling gaji bercaruman SOCSO ialah RM6,000 sebulan, dinaikkan dari RM4,000 pada Oktober 2024."}}
+]}
+</script>
+</head>
+<body>
+<nav><div class="wrap"><a href="index.html" class="logo"><span class="dot">⬡</span> HRMony</a><a href="https://hrmony.asia" class="nav-cta">Payroll Percuma →</a></div></nav>
+<header class="head"><div class="wrap"><span class="pill">KALKULATOR · KADAR 2026</span><h1>Kalkulator SOCSO / PERKESO</h1><p>Kira caruman SOCSO mengikut kategori umur dan siling gaji RM6,000.</p></div></header>
+
+<div class="wrap"><div class="calc">
+  <div class="panel"><h2>Butiran</h2>
+    <div class="field"><label>Gaji kasar sebulan</label><div class="prefix"><input type="number" id="gross" value="3000" min="0" step="50"></div></div>
+    <div class="field"><label>Umur</label><input type="number" id="age" value="30" min="16" max="80"></div>
+    <div class="hint">Siling RM6,000. Umur ≥60 = Kategori 2 (Bahaya Pekerjaan sahaja).</div>
+  </div>
+  <div class="panel result">
+    <div class="big"><div class="lbl">Jumlah Caruman SOCSO</div><div class="val" id="r-total">RM 0.00</div></div>
+    <div class="line"><span class="k">Kategori</span><span class="v" id="r-cat">1</span></div>
+    <div class="line"><span class="k">Pekerja</span><span class="v" id="r-empe">RM 0.00</span></div>
+    <div class="line"><span class="k">Majikan</span><span class="v" id="r-empr">RM 0.00</span></div>
+    <div class="line total"><span class="k">Jumlah</span><span class="v" id="r-total2">RM 0.00</span></div>
+  </div>
+</div>
+<div class="note"><b>Nota:</b> Anggaran berdasarkan kadar; jumlah caruman rasmi mengikut <b>Jadual Caruman PERKESO</b> (berdasarkan band gaji) dan mungkin berbeza beberapa sen. Kadar 2026.</div></div>
+
+<section><div class="wrap"><div class="prose">
+  <h2>Caruman SOCSO 2026</h2>
+  <p>SOCSO (PERKESO) memberi perlindungan kepada pekerja terhadap kemalangan kerja dan keilangan upaya. Caruman tertakluk pada siling gaji <strong>RM6,000</strong>.</p>
+  <table><tr><th>Kategori</th><th>Liputan</th><th>Pekerja</th><th>Majikan</th></tr>
+    <tr><td>1 (&lt;60)</td><td>Bahaya Pekerjaan + Keilangan Upaya</td><td>~0.5%</td><td>~1.75%</td></tr>
+    <tr><td>2 (≥60 / pencen)</td><td>Bahaya Pekerjaan sahaja</td><td>0%</td><td>~1.25%</td></tr>
+  </table>
+  <p>Pekerja asing juga dilindungi SOCSO. Bayaran perlu dibuat sebelum 15hb bulan berikutnya.</p>
+</div></div></section>
+
+<section class="related"><div class="wrap"><h2>Kalkulator berkaitan</h2><p class="sub">Semua percuma · kadar 2026</p>
+  <div class="rgrid">
+    <a class="rcard" href="kalkulator-epf.html"><div class="t">Kalkulator EPF</div><div class="d">Caruman KWSP</div></a>
+    <a class="rcard" href="kalkulator-eis.html"><div class="t">Kalkulator EIS</div><div class="d">Sistem Insurans Pekerjaan</div></a>
+    <a class="rcard" href="kalkulator-gaji-bersih.html"><div class="t">Gaji Bersih</div><div class="d">Take-home selepas potongan</div></a>
+  </div></div></section>
+
+<div class="cta"><h2>Payroll automatik untuk SME</h2><p>HRMony kira SOCSO, EPF, EIS, PCB dan jana fail PERKESO Assist automatik. Percuma, staf tanpa had.</p><a href="https://hrmony.asia">Cuba HRMony Percuma →</a><div class="micro">RM0 selamanya · Patuh 100% Malaysia</div></div>
+<footer><div class="wrap"><div class="disc">Kalkulator memberi anggaran. Jumlah rasmi mengikut Jadual Caruman PERKESO. Kadar 2026.</div>© 2026 HRMony · hrmony.asia</div></footer>
+
+<script src="hrmony-calc.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+function calc(){const g=+$('gross').value||0,age=+$('age').value||30;const r=HRMONY.socso(g,{age});
+  $('r-cat').textContent=r.cat;$('r-empe').textContent=HRMONY.fmt(r.empe);$('r-empr').textContent=HRMONY.fmt(r.empr);
+  $('r-total').textContent=HRMONY.fmt(r.total);$('r-total2').textContent=HRMONY.fmt(r.total);}
+document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
+</script>
+</body></html>

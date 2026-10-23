@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator SKBBK / Lindung 24 Jam 2026 — Opt-Out Warga (Tempoh Tamat), Wajib Pekerja Asing | HRMony</title>
+<meta name="description" content="Kira caruman SKBBK (Lindung 24 Jam) PERKESO 2026 — warga Malaysia DEFAULT dipotong melainkan opt-out dlm tempoh 13 Jul–31 Ogos 2026 (tamat), KEKAL WAJIB untuk pekerja asing. 0.75% gaji, siling RM6,000. Percuma.">
+<meta name="keywords" content="kalkulator skbbk, lindung 24 jam, skbbk perkeso, skim kemalangan bukan bencana kerja, caruman skbbk 2026, potongan skbbk gaji, skbbk opt out">
+<link rel="stylesheet" href="hrmony-calc.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Apa itu SKBBK / Lindung 24 Jam?","acceptedAnswer":{"@type":"Answer","text":"SKBBK (Skim Kemalangan Bukan Bencana Kerja), dikenali sebagai Lindung 24 Jam, ialah skim PERKESO yang berkuat kuasa 1 Jun 2026, memberi perlindungan 24 jam kepada pekerja bagi kemalangan yang TIDAK berkaitan kerja — di rumah, tempat awam atau perjalanan harian."}},
+{"@type":"Question","name":"Berapa caruman SKBBK?","acceptedAnswer":{"@type":"Answer","text":"Kadar fasa 1 ialah 0.75% daripada gaji bercaruman, tertakluk siling RM6,000 (maksimum kira-kira RM45 sebulan). Caruman ditanggung sepenuhnya oleh pekerja; majikan memotong dan menyerahkan kepada PERKESO."}},
+{"@type":"Question","name":"Adakah SKBBK wajib?","acceptedAnswer":{"@type":"Answer","text":"Berubah 8 Julai 2026: Kabinet umumkan SKBBK tidak lagi wajib untuk warga Malaysia — tetapi mekanismenya OPT-OUT, bukan opt-in. Warga didaftar & dipotong secara automatik melainkan hantar Notis/Perakuan Pelepasan Liabiliti dalam tempoh 13 Julai–31 Ogos 2026 (borang tersedia di portal Lindung Faedah PERKESO). Tempoh ini sudah tamat — warga yang tidak hantar notis dalam tempoh itu kekal didaftar ('sekali layak, terus layak'). Ia KEKAL WAJIB untuk pekerja bukan warga (asing), tiada opt-out untuk kategori ini."}}
+]}
+</script>
+</head>
+<body>
+<nav><div class="wrap"><a href="index.html" class="logo"><span class="dot">⬡</span> HRMony</a><a href="https://hrmony.asia" class="nav-cta">Payroll Percuma →</a></div></nav>
+<header class="head"><div class="wrap"><span class="pill" style="background:#f59e0b;color:#3a2706">● OPT-OUT WARGA (tempoh tamat) · WAJIB (pekerja asing)</span><h1>Kalkulator SKBBK / Lindung 24 Jam</h1><p>Kira caruman skim PERKESO — Skim Kemalangan Bukan Bencana Kerja.</p></div></header>
+
+<div class="wrap"><div class="calc">
+  <div class="panel"><h2>Butiran</h2>
+    <div class="field"><label>Gaji kasar sebulan</label><div class="prefix"><input type="number" id="gross" value="3000" min="0" step="50"></div></div>
+    <div class="field"><label>Umur</label><input type="number" id="age" value="30" min="16" max="80"></div>
+    <div class="field"><label>Warganegara</label><select id="citizen"><option value="1">Warga Malaysia (default dipotong)</option><option value="0">Bukan warga (wajib)</option></select></div>
+    <label class="checkrow"><input type="checkbox" id="optedOut"> Saya (warga) dah hantar Notis Pelepasan Liabiliti dlm tempoh 13 Jul–31 Ogos 2026</label>
+    <div class="hint">0.75% gaji · siling RM6,000 (maks ~RM45) · ditanggung pekerja sepenuhnya.</div>
+  </div>
+  <div class="panel result">
+    <div class="big"><div class="lbl">Caruman SKBBK / Bulan</div><div class="val" id="r-skbbk">RM 0.00</div></div>
+    <div class="line"><span class="k">Gaji bercaruman (siling 6,000)</span><span class="v" id="r-base">RM 0.00</span></div>
+    <div class="line"><span class="k">Kadar</span><span class="v">0.75%</span></div>
+    <div class="line minus"><span class="k">Ditanggung pekerja</span><span class="v" id="r-empe">- RM 0.00</span></div>
+    <div class="line"><span class="k">Ditanggung majikan</span><span class="v">RM 0.00</span></div>
+    <div class="line total"><span class="k">SKBBK sebulan</span><span class="v" id="r-skbbk2">RM 0.00</span></div>
+    <div class="line"><span class="k">SKBBK setahun</span><span class="v" id="r-year">RM 0.00</span></div>
+    <div class="line" id="r-narow" style="display:none;color:var(--amber)"><span class="k">Status</span><span class="v" style="color:var(--amber)">Umur ≥60 — semak liputan</span></div>
+    <div class="line"><span class="k">Status penyertaan</span><span class="v" id="r-voluntary" style="color:var(--amber)">Wajib (default, warga)</span></div>
+  </div>
+</div>
+<div class="note"><b>Nota:</b> Caruman <b>ditanggung sepenuhnya oleh pekerja</b>; majikan memotong & menyerah kepada PERKESO. Mekanisme ialah <b>opt-out</b>, bukan opt-in — warga DEFAULT didaftar & dipotong, tempoh untuk keluar (13 Jul–31 Ogos 2026) <b>sudah tamat</b>. Kekal wajib untuk pekerja asing. Anggaran kadar; jumlah rasmi mengikut Jadual PERKESO.</div></div>
+
+<section><div class="wrap"><div class="prose">
+  <h2>Apa itu SKBBK (Lindung 24 Jam)?</h2>
+  <p><strong>SKBBK (Skim Kemalangan Bukan Bencana Kerja)</strong> atau <strong>Lindung 24 Jam</strong> ialah skim PERKESO yang berkuat kuasa <strong>1 Jun 2026</strong>. Ia melindungi pekerja 24 jam sehari bagi kemalangan yang <strong>tidak berkaitan dengan pekerjaan</strong> — termasuk kemalangan di rumah, tempat awam dan perjalanan harian.</p>
+  <h3>Butiran caruman</h3>
+  <ul>
+    <li><strong>Kadar:</strong> 0.75% daripada gaji bercaruman (fasa 1).</li>
+    <li><strong>Siling:</strong> RM6,000 sebulan (maksimum caruman ~RM45).</li>
+    <li><strong>Ditanggung:</strong> sepenuhnya oleh pekerja; majikan memotong & remit.</li>
+    <li><strong>Status penyertaan (dikemaskini 8 Jul 2026, mekanisme disahkan 13 Jul 2026):</strong> <b>tidak lagi wajib</b> untuk pekerja warga Malaysia — tetapi mekanismenya <b>opt-out</b>, BUKAN opt-in. Warga DEFAULT didaftar & dipotong; <b>kekal wajib</b> untuk pekerja bukan warga (asing), tiada opt-out untuk kategori ini.</li>
+    <li><strong>Tempoh opt-out (warga sahaja):</strong> 13 Julai–31 Ogos 2026, melalui Notis/Perakuan Pelepasan Liabiliti di portal Lindung Faedah PERKESO. <b>Tempoh ini sudah tamat.</b> Warga yang tidak hantar notis dalam tempoh itu kekal didaftar secara kekal ("sekali layak, terus layak").</li>
+    <li><strong>Berbeza dari SOCSO:</strong> SOCSO lindung kemalangan <em>berkaitan kerja</em>; SKBBK lindung yang <em>bukan berkaitan kerja</em>.</li>
+  </ul>
+  <p>Untuk pekerja asing, majikan perlu pastikan sistem payroll memotong SKBBK secara automatik (wajib, tiada opt-out). Untuk warga Malaysia yang sudah bekerja sebelum 31 Ogos 2026 dan tidak hantar notis pelepasan dalam tempoh itu, potongan <b>diteruskan secara automatik</b> — bukan sesuatu yang perlu "dipilih masuk" lagi. Untuk pekerja baharu yang mula bekerja selepas tempoh opt-out tamat, sahkan status semasa terus dengan PERKESO (jangan andaikan) — kalkulator ini tidak membuat andaian bagi kes tersebut. <a href="https://hrmony.asia">HRMony</a> menyokong pengiraan SKBBK untuk kedua-dua kategori.</p>
+</div></div></section>
+
+<section class="related"><div class="wrap"><h2>Kalkulator berkaitan</h2><p class="sub">Semua percuma · kadar 2026</p>
+  <div class="rgrid">
+    <a class="rcard" href="kalkulator-socso.html"><div class="t">Kalkulator SOCSO</div><div class="d">Caruman PERKESO</div></a>
+    <a class="rcard" href="kalkulator-gaji-bersih.html"><div class="t">Gaji Bersih</div><div class="d">Take-home termasuk SKBBK</div></a>
+    <a class="rcard" href="kalkulator-eis.html"><div class="t">Kalkulator EIS</div><div class="d">Sistem Insurans Pekerjaan</div></a>
+  </div></div></section>
+
+<div class="cta"><h2>Payroll anda patuh SKBBK — hari pertama</h2><p>HRMony sudah menyokong pengiraan SKBBK / Lindung 24 Jam (opt-out warga — tempoh tamat, wajib pekerja asing), bersama EPF, SOCSO, EIS & PCB. Percuma, staf tanpa had.</p><a href="https://hrmony.asia">Cuba HRMony Percuma →</a><div class="micro">RM0 selamanya · Patuh 100% Malaysia</div></div>
+<footer><div class="wrap"><div class="disc">Kalkulator memberi anggaran. Jumlah rasmi mengikut PERKESO. Warga Malaysia DEFAULT dipotong melainkan opt-out dlm tempoh 13 Jul–31 Ogos 2026 (tamat); kekal wajib untuk pekerja asing. Sahkan dengan PERKESO.</div>© 2026 HRMony · hrmony.asia</div></footer>
+
+<script src="hrmony-calc.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+function calc(){const g=+$('gross').value||0,age=+$('age').value||30,citizen=$('citizen').value==='1';
+  $('optedOut').disabled=!citizen;
+  if(!citizen) $('optedOut').checked=false;
+  const optedOut=citizen&&$('optedOut').checked;
+  const base=Math.min(g,6000),amt=optedOut?0:HRMONY.skbbk(g);
+  $('r-base').textContent=HRMONY.fmt(base);
+  $('r-skbbk').textContent=HRMONY.fmt(amt);$('r-skbbk2').textContent=HRMONY.fmt(amt);
+  $('r-empe').textContent='- '+HRMONY.fmt(amt);$('r-year').textContent=HRMONY.fmt(amt*12);
+  $('r-narow').style.display=age>=60?'flex':'none';
+  $('r-voluntary').textContent=!citizen?'Wajib (bukan warga)':(optedOut?'Dah opt-out (warga)':'Wajib (default, warga)');}
+document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
+</script>
+</body></html>

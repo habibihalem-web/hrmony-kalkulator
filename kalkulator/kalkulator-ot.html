@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator OT (Kerja Lebih Masa) Malaysia 2026 — Akta Kerja 1955 | HRMony</title>
+<meta name="description" content="Kira bayaran kerja lebih masa (OT) mengikut Akta Kerja 1955 — hari biasa 1.5×, hari rehat 2.0×, cuti umum 3.0×. Percuma & pantas.">
+<meta name="keywords" content="kalkulator ot, kira ot malaysia, kerja lebih masa akta kerja 1955, overtime calculator malaysia, kadar ot 1.5">
+<link rel="stylesheet" href="hrmony-calc.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Bagaimana kira OT di Malaysia?","acceptedAnswer":{"@type":"Answer","text":"Kadar jam biasa = gaji bulanan ÷ 26 hari ÷ 8 jam. Hari biasa OT = 1.5×, kerja lebih masa hari rehat = 2.0×, kerja lebih masa cuti umum = 3.0× kadar jam biasa, mengikut Akta Kerja 1955."}},
+{"@type":"Question","name":"Apa kadar OT untuk cuti umum?","acceptedAnswer":{"@type":"Answer","text":"Kerja lebih masa pada cuti umum dibayar pada kadar 3.0 kali kadar jam biasa di bawah Akta Kerja 1955."}}
+]}
+</script>
+</head>
+<body>
+<nav><div class="wrap"><a href="index.html" class="logo"><span class="dot">⬡</span> HRMony</a><a href="https://hrmony.asia" class="nav-cta">Payroll Percuma →</a></div></nav>
+<header class="head"><div class="wrap"><span class="pill">KALKULATOR · AKTA KERJA 1955</span><h1>Kalkulator OT (Kerja Lebih Masa)</h1><p>Kira bayaran lebih masa mengikut jenis hari — Akta Kerja 1955.</p></div></header>
+
+<div class="wrap"><div class="calc">
+  <div class="panel"><h2>Butiran</h2>
+    <div class="field"><label>Gaji asas sebulan</label><div class="prefix"><input type="number" id="monthly" value="2000" min="0" step="50"></div></div>
+    <div class="field"><label>Jenis hari</label><select id="type">
+      <option value="1.5">Hari biasa (1.5×)</option>
+      <option value="2.0">Kerja lebih masa hari rehat (2.0×)</option>
+      <option value="3.0">Kerja lebih masa cuti umum (3.0×)</option>
+    </select></div>
+    <div class="field"><label>Jumlah jam OT</label><input type="number" id="hours" value="10" min="0" step="0.5"></div>
+    <div class="hint">Kadar jam biasa = gaji ÷ 26 ÷ 8.</div>
+  </div>
+  <div class="panel result">
+    <div class="big"><div class="lbl">Jumlah Bayaran OT</div><div class="val g" id="r-pay">RM 0.00</div></div>
+    <div class="line"><span class="k">Kadar jam biasa (ORP)</span><span class="v" id="r-orp">RM 0.00</span></div>
+    <div class="line"><span class="k">Pengganda</span><span class="v" id="r-mult">1.5×</span></div>
+    <div class="line"><span class="k">Jam OT</span><span class="v" id="r-hrs">0</span></div>
+    <div class="line total"><span class="k">Bayaran OT</span><span class="v" id="r-pay2">RM 0.00</span></div>
+  </div>
+</div>
+<div class="note"><b>Nota:</b> Berdasarkan formula umum Akta Kerja 1955 (kadar jam = gaji ÷ 26 ÷ 8). Peraturan penuh OT termasuk had jam dan syarat kelayakan. Kadar 2026.</div></div>
+
+<section><div class="wrap"><div class="prose">
+  <h2>Kadar OT mengikut Akta Kerja 1955</h2>
+  <table><tr><th>Situasi</th><th>Kadar</th></tr>
+    <tr><td>Lebih masa hari bekerja biasa</td><td>1.5× kadar jam</td></tr>
+    <tr><td>Kerja lebih masa pada hari rehat</td><td>2.0× kadar jam</td></tr>
+    <tr><td>Kerja lebih masa pada cuti umum</td><td>3.0× kadar jam</td></tr>
+  </table>
+  <p>Kadar jam biasa (Ordinary Rate of Pay sejam) dikira sebagai gaji bulanan dibahagi 26 hari, dibahagi 8 jam. Pekerja dalam skop Akta Kerja layak menerima bayaran lebih masa mengikut kadar di atas.</p>
+</div></div></section>
+
+<section class="related"><div class="wrap"><h2>Kalkulator berkaitan</h2><p class="sub">Semua percuma · 2026</p>
+  <div class="rgrid">
+    <a class="rcard" href="kalkulator-gaji-prorata.html"><div class="t">Gaji Prorata</div><div class="d">Bulan tak lengkap</div></a>
+    <a class="rcard" href="kalkulator-gaji-bersih.html"><div class="t">Gaji Bersih</div><div class="d">Take-home</div></a>
+    <a class="rcard" href="kalkulator-cuti-tanpa-gaji.html"><div class="t">Cuti Tanpa Gaji</div><div class="d">Potongan LWP</div></a>
+  </div></div></section>
+
+<div class="cta"><h2>Auto-kira OT dalam payroll</h2><p>HRMony kira OT ikut Akta Kerja & masukkan ke slip gaji automatik. Percuma, staf tanpa had.</p><a href="https://hrmony.asia">Cuba HRMony Percuma →</a><div class="micro">RM0 selamanya · Patuh 100% Malaysia</div></div>
+<footer><div class="wrap"><div class="disc">Kalkulator memberi anggaran. Rujuk Akta Kerja 1955 & Jabatan Tenaga Kerja untuk peraturan penuh.</div>© 2026 HRMony · hrmony.asia</div></footer>
+
+<script src="hrmony-calc.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+function calc(){const m=+$('monthly').value||0,mult=+$('type').value,hrs=+$('hours').value||0;const r=HRMONY.ot(m,hrs,mult);
+  $('r-orp').textContent=HRMONY.fmt(r.orp);$('r-mult').textContent=mult+'×';$('r-hrs').textContent=hrs;
+  $('r-pay').textContent=HRMONY.fmt(r.pay);$('r-pay2').textContent=HRMONY.fmt(r.pay);}
+document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
+</script>
+</body></html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator EIS / SIP 2026 — Sistem Insurans Pekerjaan | HRMony</title>
+<meta name="description" content="Kira caruman EIS (SIP) 2026 — 0.2% pekerja + 0.2% majikan, siling gaji RM6,000, umur 18–60. Percuma & pantas.">
+<meta name="keywords" content="kalkulator eis, kalkulator sip, caruman eis 2026, sistem insurans pekerjaan, eis perkeso">
+<link rel="stylesheet" href="hrmony-calc.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Berapa caruman EIS 2026?","acceptedAnswer":{"@type":"Answer","text":"EIS (SIP) ialah 0.2% daripada gaji untuk pekerja dan 0.2% untuk majikan, tertakluk siling gaji RM6,000. Terpakai untuk pekerja berumur 18 hingga 60 tahun."}},
+{"@type":"Question","name":"Siapa dikecualikan EIS?","acceptedAnswer":{"@type":"Answer","text":"Pekerja berumur 60 tahun ke atas dan pekerja asing umumnya dikecualikan daripada caruman EIS."}}
+]}
+</script>
+</head>
+<body>
+<nav><div class="wrap"><a href="index.html" class="logo"><span class="dot">⬡</span> HRMony</a><a href="https://hrmony.asia" class="nav-cta">Payroll Percuma →</a></div></nav>
+<header class="head"><div class="wrap"><span class="pill">KALKULATOR · KADAR 2026</span><h1>Kalkulator EIS / SIP</h1><p>Kira caruman Sistem Insurans Pekerjaan — 0.2% pekerja + 0.2% majikan.</p></div></header>
+
+<div class="wrap"><div class="calc">
+  <div class="panel"><h2>Butiran</h2>
+    <div class="field"><label>Gaji kasar sebulan</label><div class="prefix"><input type="number" id="gross" value="3000" min="0" step="50"></div></div>
+    <div class="row2">
+      <div class="field"><label>Umur</label><input type="number" id="age" value="30" min="16" max="80"></div>
+      <div class="field"><label>Warganegara</label><select id="citizen"><option value="1">Warga Malaysia</option><option value="0">Bukan warga</option></select></div>
+    </div>
+    <div class="hint">Siling RM6,000. Hanya umur 18–60, warga. Asing & 60+ dikecualikan.</div>
+  </div>
+  <div class="panel result">
+    <div class="big"><div class="lbl">Jumlah Caruman EIS</div><div class="val" id="r-total">RM 0.00</div></div>
+    <div class="line"><span class="k">Pekerja <span class="badge">0.2%</span></span><span class="v" id="r-empe">RM 0.00</span></div>
+    <div class="line"><span class="k">Majikan <span class="badge">0.2%</span></span><span class="v" id="r-empr">RM 0.00</span></div>
+    <div class="line total"><span class="k">Jumlah</span><span class="v" id="r-total2">RM 0.00</span></div>
+    <div class="line" id="r-na" style="display:none;color:var(--amber)"><span class="k">Status</span><span class="v" style="color:var(--amber)">Dikecualikan EIS</span></div>
+  </div>
+</div>
+<div class="note"><b>Nota:</b> Anggaran berdasarkan kadar; jumlah rasmi mengikut Jadual Caruman PERKESO (band gaji). Kadar 2026.</div></div>
+
+<section><div class="wrap"><div class="prose">
+  <h2>Caruman EIS (SIP) 2026</h2>
+  <p>Sistem Insurans Pekerjaan (EIS/SIP) di bawah PERKESO memberi bantuan kewangan sementara kepada pekerja yang kehilangan pekerjaan. Caruman ialah <strong>0.2% pekerja + 0.2% majikan</strong>, tertakluk siling gaji RM6,000.</p>
+  <ul><li>Terpakai: pekerja warga umur 18–60 tahun.</li><li>Dikecualikan: umur 60+, pekerja asing (umumnya).</li><li>Bayaran sebelum 15hb bulan berikutnya.</li></ul>
+</div></div></section>
+
+<section class="related"><div class="wrap"><h2>Kalkulator berkaitan</h2><p class="sub">Semua percuma · kadar 2026</p>
+  <div class="rgrid">
+    <a class="rcard" href="kalkulator-socso.html"><div class="t">Kalkulator SOCSO</div><div class="d">Caruman PERKESO</div></a>
+    <a class="rcard" href="kalkulator-epf.html"><div class="t">Kalkulator EPF</div><div class="d">Caruman KWSP</div></a>
+    <a class="rcard" href="kalkulator-gaji-bersih.html"><div class="t">Gaji Bersih</div><div class="d">Take-home selepas potongan</div></a>
+  </div></div></section>
+
+<div class="cta"><h2>Semua statutori, automatik</h2><p>HRMony kira EIS, SOCSO, EPF & PCB serentak — tiada kira manual. Percuma, staf tanpa had.</p><a href="https://hrmony.asia">Cuba HRMony Percuma →</a><div class="micro">RM0 selamanya · Patuh 100% Malaysia</div></div>
+<footer><div class="wrap"><div class="disc">Kalkulator memberi anggaran. Jumlah rasmi mengikut Jadual Caruman PERKESO. Kadar 2026.</div>© 2026 HRMony · hrmony.asia</div></footer>
+
+<script src="hrmony-calc.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+function calc(){const g=+$('gross').value||0,age=+$('age').value||30,citizen=$('citizen').value==='1';const r=HRMONY.eis(g,{age,citizen});
+  $('r-empe').textContent=HRMONY.fmt(r.empe);$('r-empr').textContent=HRMONY.fmt(r.empr);
+  $('r-total').textContent=HRMONY.fmt(r.total);$('r-total2').textContent=HRMONY.fmt(r.total);
+  $('r-na').style.display=r.applicable?'none':'flex';}
+document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
+</script>
+</body></html>

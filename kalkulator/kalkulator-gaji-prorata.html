@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator Gaji Prorata Malaysia 2026 — Bulan Tak Lengkap | HRMony</title>
+<meta name="description" content="Kira gaji prorata untuk pekerja yang masuk atau berhenti tengah bulan (incomplete month) mengikut Akta Kerja Seksyen 18B. Percuma.">
+<meta name="keywords" content="kalkulator gaji prorata, gaji bulan tak lengkap, incomplete month salary malaysia, kira gaji masuk tengah bulan, prorate gaji">
+<link rel="stylesheet" href="hrmony-calc.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Bagaimana kira gaji prorata bulan tak lengkap?","acceptedAnswer":{"@type":"Answer","text":"Mengikut Akta Kerja Seksyen 18B: gaji prorata = (gaji bulanan ÷ jumlah hari dalam bulan tersebut) × bilangan hari bekerja. Ini terpakai untuk pekerja yang masuk atau berhenti tengah bulan."}},
+{"@type":"Question","name":"Guna 26 hari atau hari sebenar bulan?","acceptedAnswer":{"@type":"Answer","text":"Untuk bulan tak lengkap di bawah Seksyen 18B, pembahagi ialah jumlah hari sebenar dalam bulan berkenaan (28, 29, 30 atau 31), bukan 26."}}
+]}
+</script>
+</head>
+<body>
+<nav><div class="wrap"><a href="index.html" class="logo"><span class="dot">⬡</span> HRMony</a><a href="https://hrmony.asia" class="nav-cta">Payroll Percuma →</a></div></nav>
+<header class="head"><div class="wrap"><span class="pill">KALKULATOR · AKTA KERJA 18B</span><h1>Kalkulator Gaji Prorata</h1><p>Kira gaji untuk pekerja yang masuk atau berhenti tengah bulan.</p></div></header>
+
+<div class="wrap"><div class="calc">
+  <div class="panel"><h2>Butiran</h2>
+    <div class="field"><label>Gaji bulanan penuh</label><div class="prefix"><input type="number" id="monthly" value="3000" min="0" step="50"></div></div>
+    <div class="row2">
+      <div class="field"><label>Hari bekerja</label><input type="number" id="worked" value="15" min="0" max="31"></div>
+      <div class="field"><label>Hari dalam bulan</label><input type="number" id="days" value="30" min="28" max="31"></div>
+    </div>
+    <div class="hint">Formula 18B: (gaji ÷ hari dalam bulan) × hari bekerja.</div>
+  </div>
+  <div class="panel result">
+    <div class="big"><div class="lbl">Gaji Prorata</div><div class="val g" id="r-pro">RM 0.00</div></div>
+    <div class="line"><span class="k">Gaji sehari</span><span class="v" id="r-daily">RM 0.00</span></div>
+    <div class="line"><span class="k">Hari bekerja</span><span class="v" id="r-worked">0</span></div>
+    <div class="line total"><span class="k">Gaji prorata</span><span class="v" id="r-pro2">RM 0.00</span></div>
+  </div>
+</div>
+<div class="note"><b>Nota:</b> Caruman EPF/SOCSO/EIS/PCB dikira atas gaji prorata ini. Formula mengikut Akta Kerja Seksyen 18B (bulan tak lengkap). Kadar 2026.</div></div>
+
+<section><div class="wrap"><div class="prose">
+  <h2>Gaji bulan tak lengkap (incomplete month)</h2>
+  <p>Apabila pekerja <strong>masuk atau berhenti tengah bulan</strong>, atau mengambil cuti tanpa gaji, gaji perlu diprorata. Akta Kerja Seksyen 18B menetapkan formula:</p>
+  <p style="font-size:18px;font-weight:700;color:var(--blue)">Gaji prorata = (Gaji bulanan ÷ Hari dalam bulan) × Hari bekerja</p>
+  <p>Pembahagi ialah jumlah hari sebenar dalam bulan tersebut (28–31 hari) — bukan 26. Selepas gaji prorata diperoleh, caruman berkanun dikira berdasarkan jumlah prorata itu.</p>
+</div></div></section>
+
+<section class="related"><div class="wrap"><h2>Kalkulator berkaitan</h2><p class="sub">Semua percuma · 2026</p>
+  <div class="rgrid">
+    <a class="rcard" href="kalkulator-cuti-tanpa-gaji.html"><div class="t">Cuti Tanpa Gaji</div><div class="d">Potongan LWP</div></a>
+    <a class="rcard" href="kalkulator-gaji-bersih.html"><div class="t">Gaji Bersih</div><div class="d">Take-home</div></a>
+    <a class="rcard" href="kalkulator-ot.html"><div class="t">Kalkulator OT</div><div class="d">Lebih masa</div></a>
+  </div></div></section>
+
+<div class="cta"><h2>Prorata automatik bila staf masuk/keluar</h2><p>HRMony kira gaji prorata + caruman secara automatik untuk join/resign tengah bulan. Percuma, staf tanpa had.</p><a href="https://hrmony.asia">Cuba HRMony Percuma →</a><div class="micro">RM0 selamanya · Patuh 100% Malaysia</div></div>
+<footer><div class="wrap"><div class="disc">Kalkulator memberi anggaran. Rujuk Akta Kerja 1955 untuk peraturan penuh.</div>© 2026 HRMony · hrmony.asia</div></footer>
+
+<script src="hrmony-calc.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+function calc(){const m=+$('monthly').value||0,w=+$('worked').value||0,d=+$('days').value||30;
+  const pro=HRMONY.prorate(m,w,d);
+  $('r-daily').textContent=HRMONY.fmt(m/d);$('r-worked').textContent=w;
+  $('r-pro').textContent=HRMONY.fmt(pro);$('r-pro2').textContent=HRMONY.fmt(pro);}
+document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
+</script>
+</body></html>

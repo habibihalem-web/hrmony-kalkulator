@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator Bonus Malaysia 2026 — EPF & Cukai Atas Bonus | HRMony</title>
+<meta name="description" content="Kira bonus bersih anda selepas EPF dan PCB (cukai bonus / additional remuneration) di Malaysia 2026. Lihat berapa masuk poket. Percuma.">
+<meta name="keywords" content="kalkulator bonus, cukai bonus malaysia, epf atas bonus, pcb bonus, bonus bersih, additional remuneration pcb">
+<link rel="stylesheet" href="hrmony-calc.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Adakah bonus dikenakan EPF dan cukai?","acceptedAnswer":{"@type":"Answer","text":"Ya. Bonus tertakluk kepada caruman EPF dan PCB (sebagai additional remuneration). Umumnya bonus tidak tertakluk SOCSO/EIS. Kalkulator menganggar bonus bersih anda."}},
+{"@type":"Question","name":"Bagaimana PCB atas bonus dikira?","acceptedAnswer":{"@type":"Answer","text":"PCB bonus dikira menggunakan formula additional remuneration — cukai tambahan akibat bonus di atas cukai gaji bulanan. Kalkulator memberi anggaran marginal."}}
+]}
+</script>
+</head>
+<body>
+<nav><div class="wrap"><a href="index.html" class="logo"><span class="dot">⬡</span> HRMony</a><a href="https://hrmony.asia" class="nav-cta">Payroll Percuma →</a></div></nav>
+<header class="head"><div class="wrap"><span class="pill">KALKULATOR · 2026</span><h1>Kalkulator Bonus</h1><p>Berapa bonus benar-benar masuk poket selepas EPF dan cukai?</p></div></header>
+
+<div class="wrap"><div class="calc">
+  <div class="panel"><h2>Butiran</h2>
+    <div class="field"><label>Jumlah bonus</label><div class="prefix"><input type="number" id="bonus" value="5000" min="0" step="100"></div></div>
+    <div class="field"><label>Gaji bulanan</label><div class="prefix"><input type="number" id="monthly" value="4000" min="0" step="100"></div></div>
+    <div class="row2">
+      <div class="field"><label>Umur</label><input type="number" id="age" value="30" min="16" max="80"></div>
+      <div class="field"><label>Warganegara</label><select id="citizen"><option value="1">Warga</option><option value="0">Bukan warga</option></select></div>
+    </div>
+    <label class="checkrow"><input type="checkbox" id="married"> Berkahwin, pasangan tidak bekerja</label>
+    <div class="field"><label>Bilangan anak</label><input type="number" id="children" value="0" min="0" max="15"></div>
+  </div>
+  <div class="panel result">
+    <div class="big"><div class="lbl">Bonus Bersih (Masuk Poket)</div><div class="val g" id="r-net">RM 0.00</div></div>
+    <div class="line"><span class="k">Bonus kasar</span><span class="v" id="r-bonus">RM 0.00</span></div>
+    <div class="line minus"><span class="k">EPF pekerja atas bonus</span><span class="v" id="r-epf">- RM 0.00</span></div>
+    <div class="line minus"><span class="k">PCB atas bonus (anggaran)</span><span class="v" id="r-pcb">- RM 0.00</span></div>
+    <div class="line total"><span class="k">Bonus bersih</span><span class="v" id="r-net2">RM 0.00</span></div>
+    <div style="margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)">
+      <div class="line"><span class="k">EPF majikan atas bonus</span><span class="v" id="r-epfr">RM 0.00</span></div>
+    </div>
+  </div>
+</div>
+<div class="note"><b>Nota:</b> Bonus tertakluk EPF & PCB (additional remuneration); umumnya <b>tidak</b> tertakluk SOCSO/EIS. PCB ialah anggaran marginal — jumlah rasmi ikut formula LHDN. Kadar 2026.</div></div>
+
+<section><div class="wrap"><div class="prose">
+  <h2>Cukai dan EPF atas bonus</h2>
+  <p>Bonus dianggap pendapatan dan tertakluk kepada potongan:</p>
+  <ul>
+    <li><strong>EPF</strong> — caruman dikenakan atas bonus (pekerja 11%, majikan 12–13%).</li>
+    <li><strong>PCB</strong> — dikira sebagai <em>additional remuneration</em>, iaitu cukai tambahan akibat bonus.</li>
+    <li><strong>SOCSO/EIS</strong> — umumnya bonus tidak tertakluk.</li>
+  </ul>
+  <p>PCB atas bonus dilaporkan bersama PCB bulan bonus dibayar (CP39) dan diserahkan kepada LHDN sebelum 15hb bulan berikutnya.</p>
+</div></div></section>
+
+<section class="related"><div class="wrap"><h2>Kalkulator berkaitan</h2><p class="sub">Semua percuma · 2026</p>
+  <div class="rgrid">
+    <a class="rcard" href="kalkulator-gaji-bersih.html"><div class="t">Gaji Bersih</div><div class="d">Take-home bulanan</div></a>
+    <a class="rcard" href="kalkulator-pcb.html"><div class="t">Kalkulator PCB</div><div class="d">Cukai bulanan</div></a>
+    <a class="rcard" href="kalkulator-epf.html"><div class="t">Kalkulator EPF</div><div class="d">Caruman KWSP</div></a>
+  </div></div></section>
+
+<div class="cta"><h2>Bonus run, automatik & tepat</h2><p>HRMony kira EPF & PCB bonus ikut formula LHDN dan masukkan ke slip gaji. Percuma, staf tanpa had.</p><a href="https://hrmony.asia">Cuba HRMony Percuma →</a><div class="micro">RM0 selamanya · Patuh 100% Malaysia</div></div>
+<footer><div class="wrap"><div class="disc">Kalkulator memberi <b>anggaran</b> sahaja. PCB sebenar mengikut formula additional remuneration LHDN. Sahkan dengan LHDN.</div>© 2026 HRMony · hrmony.asia</div></footer>
+
+<script src="hrmony-calc.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+function calc(){
+  const bonus=+$('bonus').value||0,monthly=+$('monthly').value||0,age=+$('age').value||30,citizen=$('citizen').value==='1';
+  const married=$('married').checked,children=+$('children').value||0;
+  // EPF atas bonus
+  let er = !citizen?0.02:(age>=60?0:0.11);
+  let rr = !citizen?0.02:(age>=60?0.04:(monthly<=5000?0.13:0.12));
+  const epfEmpe=Math.ceil(bonus*er), epfEmpr=Math.ceil(bonus*rr);
+  // PCB marginal atas bonus
+  const relief = 9000 + Math.min((HRMONY.epf(monthly,{age,citizen}).empe*12)+epfEmpe,4000) + (married?4000:0) + children*2000;
+  const ciBase = Math.max(0, monthly*12 - (9000+Math.min(HRMONY.epf(monthly,{age,citizen}).empe*12,4000)+(married?4000:0)+children*2000));
+  const ciBonus = Math.max(0, monthly*12 + bonus - relief);
+  let pcbBonus = Math.max(0, HRMONY.incomeTax(ciBonus) - HRMONY.incomeTax(ciBase));
+  pcbBonus = +pcbBonus.toFixed(2);
+  const net = Math.max(0, +(bonus - epfEmpe - pcbBonus).toFixed(2));
+  $('r-bonus').textContent=HRMONY.fmt(bonus);
+  $('r-epf').textContent='- '+HRMONY.fmt(epfEmpe);
+  $('r-pcb').textContent='- '+HRMONY.fmt(pcbBonus);
+  $('r-net').textContent=HRMONY.fmt(net);$('r-net2').textContent=HRMONY.fmt(net);
+  $('r-epfr').textContent=HRMONY.fmt(epfEmpr);
+}
+document.querySelectorAll('input,select').forEach(e=>e.addEventListener('input',calc));calc();
+</script>
+</body></html>
