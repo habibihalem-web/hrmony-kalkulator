@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://habibihalem-web.github.io/hrmony-kalkulator/sitemap.xml
