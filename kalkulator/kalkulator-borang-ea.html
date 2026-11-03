@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator Borang EA 2026 — Pra-Kira Jumlah Tahunan (Gaji, EPF, PCB) | HRMony</title>
+<meta name="description" content="Pra-kira jumlah gaji kasar, EPF, SOCSO/EIS dan PCB setahun untuk bantu isi Borang EA (Penyata Saraan Tahunan) pekerja Malaysia 2026. Percuma.">
+<meta name="keywords" content="kalkulator borang ea, borang ea 2026, penyata saraan tahunan, borang ea malaysia, cp8a">
+<link rel="canonical" href="https://hrmony.asia/kalkulator/borang-ea">
+<link rel="stylesheet" href="hrmony-calc.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Apa itu Borang EA?","acceptedAnswer":{"@type":"Answer","text":"Borang EA (C.P.8A) ialah Penyata Saraan Tahunan yang majikan WAJIB beri kepada setiap pekerja selewat-lewatnya 28 Februari tahun berikutnya — mengandungi jumlah gaji, bonus, elaun, EPF, SOCSO/EIS dan PCB sepanjang tahun untuk kegunaan e-Filing pekerja."}},
+{"@type":"Question","name":"Adakah kalkulator ini Borang EA rasmi?","acceptedAnswer":{"@type":"Answer","text":"Tidak. Kalkulator ini hanya membantu pra-kira jumlah tahunan (gaji, EPF, PCB) sebelum anda isi Borang EA rasmi. Kod kotak rasmi (C, D, E dll.) dan format PDF perlu dirujuk daripada panduan LHDN atau sistem payroll anda."}}
+]}
+</script>
+</head>
+<body>
+<nav><div class="wrap"><a href="index.html" class="logo"><span class="dot">⬡</span> HRMony</a><a href="https://hrmony.asia" class="nav-cta">Payroll Percuma →</a></div></nav>
+<header class="head"><div class="wrap"><span class="pill">KALKULATOR · KADAR 2026 <span style="font-size:11px;font-weight:800;color:#fff;background:var(--amber);padding:2px 8px;border-radius:6px;vertical-align:middle;margin-left:6px">BAHARU</span></span><h1>Kalkulator Borang EA</h1><p>Pra-kira jumlah gaji, EPF, SOCSO/EIS & PCB setahun untuk bantu isi Borang EA (Penyata Saraan Tahunan) pekerja anda.</p></div></header>
+
+<div class="wrap"><div class="calc">
+  <div class="panel"><h2>Butiran setahun</h2>
+    <div class="field"><label>Gaji kasar bulanan</label><div class="prefix"><input type="number" id="monthly" value="4000" min="0" step="100"></div></div>
+    <div class="field"><label>Bilangan bulan bekerja tahun ini</label><input type="number" id="months" value="12" min="1" max="12"></div>
+    <div class="row2">
+      <div class="field"><label>Jumlah bonus setahun</label><div class="prefix"><input type="number" id="bonus" value="0" min="0" step="100"></div></div>
+      <div class="field"><label>Jumlah elaun/komisen kena cukai</label><div class="prefix"><input type="number" id="allow" value="0" min="0" step="100"></div></div>
+    </div>
+    <div class="row2">
+      <div class="field"><label>Umur</label><input type="number" id="age" value="30" min="16" max="80"></div>
+      <div class="field"><label>Warganegara</label><select id="citizen"><option value="1">Warga</option><option value="0">Bukan warga</option></select></div>
+    </div>
+    <label class="checkrow"><input type="checkbox" id="married"> Berkahwin, pasangan tidak bekerja</label>
+    <div class="field"><label>Bilangan anak</label><input type="number" id="children" value="0" min="0" max="15"></div>
+  </div>
+  <div class="panel result">
+    <div class="big"><div class="lbl">Jumlah Pendapatan Kasar Setahun</div><div class="val" id="r-gross">RM 0.00</div></div>
+    <div class="line"><span class="k">Gaji/upah kasar (bulanan × bulan)</span><span class="v" id="r-basic">RM 0.00</span></div>
+    <div class="line"><span class="k">Bonus + elaun/komisen</span><span class="v" id="r-extra">RM 0.00</span></div>
+    <div class="line minus"><span class="k">EPF pekerja setahun</span><span class="v" id="r-epf">- RM 0.00</span></div>
+    <div class="line minus"><span class="k">SOCSO + EIS pekerja setahun</span><span class="v" id="r-socsoeis">- RM 0.00</span></div>
+    <div class="line minus"><span class="k">PCB/cukai dipotong setahun (anggaran)</span><span class="v" id="r-pcb">- RM 0.00</span></div>
+    <div class="line total"><span class="k">Anggaran gaji bersih setahun</span><span class="v" id="r-net">RM 0.00</span></div>
+    <div style="margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)">
+      <div class="line"><span class="k">EPF majikan setahun</span><span class="v" id="r-epfr">RM 0.00</span></div>
+    </div>
+  </div>
+</div>
+<div class="note"><b>Nota:</b> Ini BUKAN Borang EA rasmi — hanya kalkulator pra-kira jumlah tahunan. Kod kotak rasmi (C/D/E…), BIK/VOLA dan format PDF mesti ikut panduan LHDN atau sistem payroll anda. Majikan WAJIB beri Borang EA sebenar kepada pekerja selewat-lewatnya 28 Februari.</div></div>
+
+<section><div class="wrap"><div class="prose">
+  <h2>Apa itu Borang EA & bila tarikh akhir?</h2>
+  <p>Borang EA (nama rasmi: C.P.8A) ialah <strong>Penyata Saraan Tahunan</strong> — dokumen yang majikan di Malaysia WAJIB sediakan untuk setiap pekerja (termasuk bekas pekerja yang bekerja walaupun sehari dalam tahun berkenaan), mengandungi jumlah gaji, bonus, elaun, faedah berbentuk barangan (BIK), caruman EPF, SOCSO/EIS dan PCB yang dipotong sepanjang tahun.</p>
+  <table><tr><th>Apa</th><th>Tarikh akhir</th></tr>
+    <tr><td>Majikan serah Borang EA kepada pekerja</td><td>28 Februari</td></tr>
+    <tr><td>Majikan hantar Borang E + CP8D ke LHDN (manual)</td><td>31 Mac</td></tr>
+    <tr><td>Majikan hantar Borang E + CP8D ke LHDN (e-Filing)</td><td>30 April</td></tr>
+  </table>
+  <p>Pekerja guna angka dalam Borang EA untuk isi e-Filing (Borang BE) sendiri. Kalkulator ini membantu majikan/HR pra-kira jumlah tahunan sebelum menjana Borang EA sebenar melalui sistem payroll atau format rasmi LHDN.</p>
+</div></div></section>
+
+<section class="related"><div class="wrap"><h2>Kalkulator berkaitan</h2><p class="sub">Semua percuma · kadar 2026</p>
+  <div class="rgrid">
+    <a class="rcard" href="kalkulator-gaji-bersih.html"><div class="t">Gaji Bersih</div><div class="d">Take-home bulanan</div></a>
+    <a class="rcard" href="kalkulator-bonus.html"><div class="t">Bonus</div><div class="d">EPF & cukai atas bonus</div></a>
+    <a class="rcard" href="kalkulator-pcb.html"><div class="t">PCB / MTD</div><div class="d">Cukai bulanan</div></a>
+  </div></div></section>
+
+<div class="cta"><h2>Borang EA automatik, bukan manual</h2><p>HRMony jana Borang EA, slip gaji & fail statutori secara automatik dari data payroll sepanjang tahun. Percuma, staf tanpa had.</p><a href="https://hrmony.asia">Cuba HRMony Percuma →</a><div class="micro">RM0 selamanya · Patuh 100% Malaysia</div></div>
+<footer><div class="wrap"><div class="disc">Kalkulator memberi <b>anggaran</b> untuk bantu pra-kira sahaja, bukan Borang EA rasmi atau nasihat cukai/perundangan. Rujuk panduan LHDN untuk format & kod kotak rasmi. Kadar 2026.</div>© 2026 HRMony · hrmony.asia</div></footer>
+
+<script src="hrmony-calc.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+function calc(){
+  const monthly=+$('monthly').value||0, months=+$('months').value||12;
+  const bonus=+$('bonus').value||0, allow=+$('allow').value||0;
+  const age=+$('age').value||30, citizen=$('citizen').value==='1';
+  const married=$('married').checked, children=+$('children').value||0;
+  const extra=bonus+allow;
+  const basic=monthly*months;
+  const gross=basic+extra;
+
+  const m=HRMONY.epf(monthly,{age,citizen});
+  const s=HRMONY.socso(monthly,{age});
+  const e=HRMONY.eis(monthly,{age,citizen});
+  const epfMonthlyAnnual={empe:m.empe*months, empr:m.empr*months};
+  const socsoeisAnnual=(s.empe+e.empe)*months;
+  const socsoeisAnnualEmpr=(s.empr+e.empr)*months;
+
+  let erExtra = !citizen?0.02:(age>=60?0:0.11);
+  let rrExtra = !citizen?0.02:(age>=60?0.04:(monthly<=5000?0.13:0.12));
+  const epfExtraEmpe=Math.ceil(extra*erExtra), epfExtraEmpr=Math.ceil(extra*rrExtra);
+
+  const epfAnnualEmpe=epfMonthlyAnnual.empe+epfExtraEmpe;
+  const epfAnnualEmpr=epfMonthlyAnnual.empr+epfExtraEmpr;
+
+  const pcbMonthly=HRMONY.pcb(monthly,{age,citizen,married,spouseWorking:false,children});
+  const pcbAnnualBasic=pcbMonthly*months;
+  const reliefBase=9000+Math.min(epfMonthlyAnnual.empe,4000)+(married?4000:0)+children*2000;
+  const reliefExtra=9000+Math.min(epfAnnualEmpe,4000)+(married?4000:0)+children*2000;
+  const ciBase=Math.max(0, basic-reliefBase);
+  const ciTotal=Math.max(0, gross-reliefExtra);
+  let pcbOnExtra=Math.max(0, HRMONY.incomeTax(ciTotal)-HRMONY.incomeTax(ciBase));
+  const pcbAnnual=+(pcbAnnualBasic+pcbOnExtra).toFixed(2);
+
+  const net=Math.max(0, +(gross-epfAnnualEmpe-socsoeisAnnual-pcbAnnual).toFixed(2));
+
+  $('r-gross').textContent=HRMONY.fmt(gross);
+  $('r-basic').textContent=HRMONY.fmt(basic);
+  $('r-extra').textContent=HRMONY.fmt(extra);
+  $('r-epf').textContent='- '+HRMONY.fmt(epfAnnualEmpe);
+  $('r-socsoeis').textContent='- '+HRMONY.fmt(socsoeisAnnual);
+  $('r-pcb').textContent='- '+HRMONY.fmt(pcbAnnual);
+  $('r-net').textContent=HRMONY.fmt(net);
+  $('r-epfr').textContent=HRMONY.fmt(epfAnnualEmpr+socsoeisAnnualEmpr);
+}
+document.querySelectorAll('input,select').forEach(ev=>ev.addEventListener('input',calc));calc();
+</script>
+</body></html>
